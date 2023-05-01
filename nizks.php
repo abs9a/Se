@@ -1,6 +1,6 @@
 <?php
 //=========التوكن=========//
-$token = "توكن"; 
+$token = "6213553832:AAGm7ChLDG-onBcA0ZZeIHgr3aP-91jZtNM"; 
 define("API_KEY", $token);
 echo "setWebhook ~> <a href=\"https://api.telegram.org/bot".API_KEY."/setwebhook?url=".$_SERVER['SERVER_NAME']."".$_SERVER['SCRIPT_NAME']."\">https://api.telegram.org/bot".API_KEY."/setwebhook?url=".$_SERVER['SERVER_NAME']."".$_SERVER['SCRIPT_NAME']."</a>";
 function bot($method,$datas=[]){
@@ -34,16 +34,16 @@ $mid = $message->message_id; $name2 = $update->callback_query->from->first_name;
 @$fromid = $update->callback_query->from->id;
 @$membercall = $update->callback_query->id;
 @$reply = $update->message->reply_to_message->forward_from->id;
-/*===== dev ~ @FF8FFI =====*/
+/*===== dev ~ @r6r8r =====*/
 @$data = $update->callback_query->data;
 @$messageid = $update->callback_query->message->message_id;
 @$tc = $update->message->chat->type;
 @$gpname = $update->callback_query->message->chat->title;
 @$namegroup = $update->message->chat->title;
-/*===== dev ~ @FF8FFI =====*/
+/*===== dev ~ @Fr6r8r =====*/
 $F_Uid = json_decode(file_get_contents("https://api.telegram.org/bot$token/getChat?chat_id=$from_id"),true);
 $bio = $F_Uid['result']['bio'];
-/*===== dev ~ @FF8FFI =====*/
+/*===== dev ~ @r6r8r =====*/
 @$newchatmemberid = $update->message->new_chat_member->id;
 @$newchatmemberu = $update->message->new_chat_member->username;
 @$rt = $update->message->reply_to_message;
@@ -60,7 +60,7 @@ $bio = $F_Uid['result']['bio'];
 @$edit_for_id = $update->edited_message->from->id;
 @$edit_chatid = $update->callback_query->edited_message->chat->id;
 @$caption = $update->message->caption;
-/*===== dev ~ @FF8FFI =====*/
+/*===== dev ~ @r6r8r =====*/
 @$statjson = json_decode(file_get_contents("https://api.telegram.org/bot$token/getChatMember?chat_id=$chat_id&user_id=".$from_id),true);
 @$status = $statjson['result']['status'];
 @$statjsonrt = json_decode(file_get_contents("https://api.telegram.org/bot$token/getChatMember?chat_id=$chat_id&user_id=".$re_id),true);
@@ -71,7 +71,7 @@ $bio = $F_Uid['result']['bio'];
 @$you = $info['result']['status'];
 @$forchannel = json_decode(file_get_contents("https://api.telegram.org/bot".$token."/getChatMember?chat_id=@".$channel."&user_id=".$from_id));
 @$tch = $forchannel->result->status;
-/*===== dev ~ @FF8FFI =====*/
+/*===== dev ~ @r6r8r =====*/
 $infos = json_decode(file_get_contents("https://api.telegram.org/bot".API_KEY."/getChatMember?chat_id=$chat_id&user_id=$idBot"), true);
 $bot = $infos['result']['status'];
 $can_bot_chang_info = $infos['result']['can_change_info'];
@@ -80,7 +80,7 @@ $can_bot_restrict = $infos['result']['can_restrict_members'];
 $can_bot_invite = $infos['result']['can_invite_users'];
 $can_bot_pin = $infos['result']['can_pin_messages'];
 $can_bot_promote = $infos['result']['can_promote_members'];
-/*===== dev ~ @FF8FFI =====*/
+/*===== dev ~ @Fr6r8r =====*/
 @$settings = json_decode(file_get_contents("data/$chat_id.json"),true);
 @$settings2 = json_decode(file_get_contents("data/$chatid.json"),true);
 @$editgetsettings = json_decode(file_get_contents("data/$chat_edit_id.json"),true);
@@ -106,15 +106,15 @@ $UserDevpe = json_decode(file_get_contents("http://api.telegram.org/bot$token/ge
 $NameDevpe = json_decode(file_get_contents("http://api.telegram.org/bot$token/getChat?chat_id=$admin"))->result->first_name;
 
 #############
-$admin = "5203138115";
-$Dev = array("$admin","5203138115");
-$eri = array("$admin","5203138115");
+$admin = "5217623359";
+$Dev = array("$admin","5217623359");
+$eri = array("$admin","5217623359");
 $idbot = "5534586215";
 $sudo = "$admin";
-$buy = "kindi3";
-$DevUser = "@$buy";
-$devchink = "TH3NK";
-$userbot = "AlKindibot";
+$buy = "r6r8r";
+$DevUser = "@$uzzdd";
+$devchink = "uzzdd";
+$userbot = "r6r8rBoT";
 $chsource = "$devchink";
 ############
 if ($tc == 'private'){  
@@ -170,7 +170,7 @@ bot('sendmessage',[
 'chat_id'=>$chat_id,
 'text'=>"⋄︙ اهلأ عزيزي - [$first_name](tg://user?id=$from_id)
 ⋄︙ اليك قائمة المطور الخاصه في بوتك
-⋄︙ [تحديثات السورس الجديده](https://t.me/FT_III)",
+⋄︙ [تحديثات السورس الجديده](https://t.me/uzzdd)",
 'parse_mode'=>"markdown",
 'disable_web_page_preview'=>true,
 'reply_to_message_id'=>$message->message_id,
